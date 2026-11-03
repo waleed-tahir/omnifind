@@ -1,0 +1,7 @@
+/target
+*.fst
+*.tmp
+.portable
+*.pdb
+.DS_Store
+Thumbs.db

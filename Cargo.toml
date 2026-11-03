@@ -1,0 +1,29 @@
+[package]
+name = "omnifind"
+version = "1.0.0"
+edition = "2024"
+authors = ["Waleed Tahir <waleedtts335@gmail.com>"]
+description = "High-performance instant desktop file search engine for Windows"
+
+[dependencies]
+anyhow = "1.0.100"
+dirs = "6.0.0"
+fst = "0.4.7"
+iced = { version = "0.12.1", features = ["tokio"] }
+tokio = { version = "1", features = ["time", "sync"] }
+image = "0.25.9"
+jwalk = "0.8.1"
+memmap2 = "0.9.9"
+open = "5.3.3"
+rayon = "1.11.0"
+notify = "8.2.1"
+
+[build-dependencies]
+winres = "0.1"
+
+[profile.release]
+strip = true 
+opt-level = 3
+lto = true
+codegen-units = 1 
+panic = "abort"
